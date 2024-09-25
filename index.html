@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes</title>
+    <link rel="icon" type="image/png" href="./assets/img/logo.png" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="shapes-nav">
+            <div class="shape-item" id="shape-triangle" onclick="handleTriangleClick()">
+                <div class="canvas-container">
+                    <canvas id="triangle-canvas" width="75" height="75"></canvas>
+                </div>
+                <h3 class="shape-label">Triangle</h3>
+            </div>
+            <div class="shape-item" id="shape-circle" onclick="handleCircleClick()">
+                <div class="canvas-container">
+                    <canvas id="circle-canvas" width="75" height="75"></canvas>
+                </div>
+                <h3 class="shape-label">Circle</h3>
+            </div>
+            <div class="shape-item" id="shape-square" onclick="handleSquareClick()">
+                <div class="canvas-container">
+                    <canvas id="square-canvas" width="75" height="75"></canvas>
+                </div>
+                <h3 class="shape-label">Square</h3>
+            </div>
+        </nav>
+    
+        <main>
+            <div class="main-input">
+                <div class="input-div">
+                    <input type="text" id="input" autocomplete="off">
+                </div>
+                <button id="submit-button" onclick="handleButtonClick()">Next</button>
+            </div>
+            <canvas id="super-canvas" width="500" height="520"></canvas>
+            <div class="description-container">
+                <p  class="area-description"></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

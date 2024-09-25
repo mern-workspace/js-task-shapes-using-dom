@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.container {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Navigation for Shapes */
+.shapes-nav {
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1em;
+    gap: 2em;
+    flex-wrap: wrap;
+    
+}
+
+.shape-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin: 1em 0;
+    width: 80%;
+    padding: .5em;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    
+}
+
+.shape-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.canvas-container canvas {
+    transition: transform 0.3s ease; 
+}
+
+.shape-item:hover .canvas-container canvas {
+    transform: scale(1.2); 
+}
+
+h3 {
+    text-align: center;
+    margin-top: 0.5em;
+    font-size: 1.2rem;
+    color: #333;
+    padding-bottom: .5em;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    padding-top: 3.5em;
+    background-color: #eaeaea;
+}
+
+.input-div {
+    width: 50%;
+    padding: 0;
+    border-bottom: 1px solid black;
+    margin-left: 25%;
+}
+
+/* Input Field */
+#input {
+    padding: 10px;
+    width: 100%;
+    font-size: 1.25rem;
+    border: none;
+    background-color: #f8f8f8;
+    /* color: white; */
+}
+
+#input:disabled {
+    cursor: not-allowed;
+}
+
+#input::placeholder {
+    font-weight: 200;
+}
+
+input:focus {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.main-input {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+/* Canvas */
+#super-canvas {
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.001);
+    margin-top: 2em;
+}
+
+/* Button */
+#submit-button {
+    width: 100px;
+    height: 40px;
+    margin-left: 2em;
+    padding: 0.5em 0.75em;
+    /* background-color: rgba(37, 37, 37, 0.593); */
+    background-color: rgb(160, 160, 160);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#submit-button:disabled {
+    background-color:rgba(121, 120, 120, 0.593);
+}
+
+#submit-button:disabled:hover {
+    cursor:not-allowed ;
+    background-color: #5a5858;
+}
+
+.area-description {
+    text-align: start;
+}
+
+.description-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+}
+
+#submit-button:hover {
+    /* background-color: #45a049; */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .shapes-nav {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .shape-item {
+        margin-left: 0;
+    }
+
+    main {
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #input {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    #submit-button {
+        width: 90px;
+        font-size: 0.9rem;
+    }
+}
